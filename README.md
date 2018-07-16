@@ -1,4 +1,5 @@
 # IctNgTest
+![alt text](https://raw.githubusercontent.com/ICTTrier/ICT.Ng.Assesment.Test/master/ictngtest.png)
 ## Introduction
 This small test requires just a basic knowledge of JS/TS, CSS, HTML and Angular.
 You free to use any help you can find on the internet to complete the tasks.
@@ -38,4 +39,3 @@ Its not mandatoried to solve all tasks. We are just using this little test to me
 - API Key: 
 - API https://www.alphavantage.co/documentation/
 - Example: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=XVG&to_currency=EUR&apikey=apikey
-# How the solution could look like
