@@ -1,10 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { HeaderCmpComponent } from './header-cmp/header-cmp.component';
+import { ContentCmpComponent } from './content-cmp/content-cmp.component';
+import { SolutionCmpComponent } from './solution-cmp/solution-cmp.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserModule, HttpClientModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderCmpComponent,
+        ContentCmpComponent,
+        SolutionCmpComponent
       ],
     }).compileComponents();
   }));
@@ -12,16 +23,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ict-ng-test!');
   }));
 });
