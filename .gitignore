@@ -1,9 +1,4 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# solutions
-/src/app/solution-cmp
-/src/app/solution.service.ts
-
 # compiled output
 /dist
 /tmp

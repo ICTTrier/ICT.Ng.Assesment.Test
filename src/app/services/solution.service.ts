@@ -15,6 +15,7 @@ export class SolutionService {
     //Given API Key
     //return this.http.get<any>("https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency="+fromCurrency+"&to_currency="+toCurrency+"&apikey=M57J7OETHP50THAO");
     
+    
     // for demo API Keys
     return this.http.get<any>("https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey=demo");
 

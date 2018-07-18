@@ -1,0 +1,20 @@
+
+<div [hidden]="xchangeRates?.length>20">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+<div fxFlex [hidden]="xchangeRates?.length <20">
+    <mat-grid-list cols="7" rowHeight="100px">
+        <mat-grid-tile *ngFor="let ext of xchangeRates" [style.background]="ext.color">
+          <mat-list>
+            <mat-list-item>
+         <h1 matLine>{{ext.f}}/{{ext.t}}</h1>
+       
+         
+       <h4 matLine> {{ext.r}} </h4>
+       <h4 matLine> {{ext.index}} </h4>
+      </mat-list-item>
+      </mat-list>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>
