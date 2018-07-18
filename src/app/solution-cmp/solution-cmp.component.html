@@ -1,0 +1,15 @@
+<div class="tile"  [ngClass]="{'faild': !isLoading && errorMessage.length > 0, 'loading': isLoading, 'waiting': waiting}">
+  <div *ngIf="!isLoading && errorMessage.length == 0 && !waiting">
+    <h2>{{toName}}/{{fromName}}</h2>
+    <b>{{exchangeRate}}</b>
+  </div>
+  <div *ngIf="!isLoading && errorMessage.length > 0 && !waiting">
+    <span>{{errorMessage}}</span>
+  </div>
+  <div *ngIf="isLoading">
+    <span>Loading...</span>
+  </div>
+  <div *ngIf="waiting">
+      <span>Waiting.. next try in {{timeout}} MS</span>
+    </div>
+</div>
