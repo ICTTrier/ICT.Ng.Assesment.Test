@@ -7,7 +7,6 @@ import { getMatIconNoHttpProviderError } from '../../../node_modules/@angular/ma
   styleUrls: ['./solution-cmp.component.css']
 })
 export class SolutionCmpComponent implements OnInit {
-  
   //@Input() fromCurrency:String;
   //@Input() toCurrency:String;
   //@Input() delay:String;
