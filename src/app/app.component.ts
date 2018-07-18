@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HeaderCmpComponent } from './header-cmp/header-cmp.component';
 
 @Component({
   selector: 'app-root',
@@ -30,9 +31,9 @@ export class AppComponent {
     {from:"TRX",to:"GBP"}
    ];
   title = 'ict-ng-test';
-
   refresh() {
     // little trick to copy the model to force angular to refresh the view
+    alert("here");
     this.exchangeRates = JSON.parse(JSON.stringify(this.exchangeRates));
   }
 }

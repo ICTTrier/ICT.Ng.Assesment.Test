@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+   
+    <form novalidate (ngSubmit)="onSubmit()" [formGroup]="extForm" class="formFields" >
+        <span class="input">
+        <input  matInput formControlName="fromCurrency" placeholder="From Currency" type="text" required>
+        <mat-error class="error" *ngIf="formErrors.fromCurrency">{{formErrors.fromCurrency}}</mat-error>
+      </span>
+      <span class="input">
+        <input matInput formControlName="toCurrency" placeholder="To Currency" type="text" required>
+        <mat-error class="error" *ngIf="formErrors.toCurrency">{{formErrors.toCurrency}}</mat-error>
+      </span>
+      <span class="input">
+        <button mat-button mat-dialog type="submit" [disabled]="extForm.invalid">Add Exchange Rate</button>
+      </span>
+      <span class="input">
+      <button mat-button mat-dialog-close>Cancel</button>
+    </span>
+      </form>
+</div>

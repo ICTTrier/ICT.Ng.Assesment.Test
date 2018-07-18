@@ -1,6 +1,11 @@
-<header-cmp (refreshButtonClicked)="refresh()"></header-cmp>
+<header-cmp (refreshButtonClicked)="refresh()" [parentExchangeList]="exchangeRates"></header-cmp>
 <content-cmp>
   <!-- Place your content here -->
-  <solution-cmp *ngFor="let exRate of exchangeRates; let i = index" [fromCurrency]="exRate.from"
-  [toCurrency]="exRate.to" [delay]="i * 1000"></solution-cmp>
+  <app-solution-cmp [appRateList]="exchangeRates"></app-solution-cmp>
+<!--
+  <app-solution-cmp  *ngFor="let exRate of exchangeRates; let i = index" [fromCurrency]="exRate.from"
+  [toCurrency]="exRate.to" [delay]="i * 1000"> </app-solution-cmp>  -->
+    
 </content-cmp>
+
+
