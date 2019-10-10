@@ -1,12 +1,17 @@
 import {Component} from '@angular/core';
 
+export interface IExchangeRates {
+  from: string;
+  to: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public exchangeRates: { from: string; to: string }[] = [
+  public exchangeRates: IExchangeRates[] = [
     {from: 'BTC', to: 'EUR'},
     {from: 'XVG', to: 'EUR'},
     {from: 'ETH', to: 'EUR'},
